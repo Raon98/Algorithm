@@ -131,7 +131,7 @@ queue2 = [4, 6, 5, 1]
 **새로 배운 스킬**
 <br>
  
-###arr.REDUCE 함수
+### arr.REDUCE 함수
 Array.reduce((누적값, 현잿값, 인덱스, 요소) => { return 결과 }, 초깃값);
 
 ```javascript
