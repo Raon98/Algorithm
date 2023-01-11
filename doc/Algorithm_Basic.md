@@ -1,6 +1,6 @@
 ## 알고리즘 기초
 ***
-####var | let | const 차이
+####1. var | let | const 차이
 #####먼저 변수란 ?
 >변수(variable)는 하나의 값을 저장하기 위해 확보한 메모리 공간 자체 또는 그 메모리 공간을 식별하기 위해 붙이 이름
 ```javascript
@@ -74,7 +74,7 @@
 
 [[참조] : 김민정 블로그 ➪ var/let/const 차이](https://www.howdy-mj.me/javascript/var-let-const)
 ***
-####화살표함수(Arrow) 와 일반 함수 차이
+####2. 화살표함수(Arrow) 와 일반 함수 차이
 1. This
    - 일반 함수 <Br> `일반함수는 함수를 선언할 때 this에 바인딩할 객체가 정적으로 결정되는 것이 아니고,
    함수를 호출할 때 함수가 어떻게 호출되었는지에 따라 this에 바인딩할 객체가 동적으로 결정된다.`
@@ -151,9 +151,11 @@
 
 [[참조] : 혜미의 개발 블로그 ➪ 화살표함수](https://hhyemi.github.io/2021/06/09/arrow.html)
 ***
+####배열의 시간복잡도
 
+***
 ####왼쪽&오른쪽 시프트 연산자
-> 비트연산자 [ << ,  >> ]
+비트연산자 [ << ,  >> ]
 ```javascript
     const b5 = 4 << 2;
     console.log(b5); //16
@@ -163,23 +165,6 @@
     //0001 0000 16(2비트 이동)
 ```
 
-
-**arr.REDUCE 함수**
->arr.reduce((누적값, 현잿값, 인덱스, 요소) => { return 결과 }, 초깃값);
-```javascript
-array.reduce((acc,cur) => ({ ...acc,
-        [cur]: (acc[cur] || 0) + 1
-    }), {})
-```
-> arr.reduce 이용해 배열 만들기 //초기값 배열로설정
-```javascript
-    result = oneTwoThree.reduce((acc, cur) => {
-      acc.push(cur % 2 ? '홀수' : '짝수');
-      return acc;
-    }, []);
-    result; // ['홀수', '짝수', '홀수']
-
-```
 ***
 <br>
 <br>
