@@ -152,6 +152,35 @@
 [[참조] : 혜미의 개발 블로그 ➪ 화살표함수](https://hhyemi.github.io/2021/06/09/arrow.html)
 ***
 
+####왼쪽&오른쪽 시프트 연산자
+> 비트연산자 [ << ,  >> ]
+```javascript
+    const b5 = 4 << 2;
+    console.log(b5); //16
+    //4를 2비트 왼쪽으로 이동한다.
+    //0000 0100 4
+    //0000 1000 8(1비트 이동)
+    //0001 0000 16(2비트 이동)
+```
+
+
+**arr.REDUCE 함수**
+>arr.reduce((누적값, 현잿값, 인덱스, 요소) => { return 결과 }, 초깃값);
+```javascript
+array.reduce((acc,cur) => ({ ...acc,
+        [cur]: (acc[cur] || 0) + 1
+    }), {})
+```
+> arr.reduce 이용해 배열 만들기 //초기값 배열로설정
+```javascript
+    result = oneTwoThree.reduce((acc, cur) => {
+      acc.push(cur % 2 ? '홀수' : '짝수');
+      return acc;
+    }, []);
+    result; // ['홀수', '짝수', '홀수']
+
+```
+***
 <br>
 <br>
 <br>
