@@ -154,6 +154,18 @@
 [[참조] : 혜미의 개발 블로그 ➪ 화살표함수](https://hhyemi.github.io/2021/06/09/arrow.html)
 ***
 
+#### 대표적인 문자표기법
+카멜 표기법(Camel Case) 
+- 단어의 첫문자은 대문자로 적되, 맨 앞에 있는 단어는 소문자로 표기
+```javascript
+ camelCase | kimSungCheol | systemUpdate ...
+```
+스네이크 표기법(Snake Case)
+- 단어 사이에 언더바를 넣어서 표기
+```javascript
+ camel_case | kim_sung_cheol | system_update ...
+```
+
 #### 왼쪽&오른쪽 시프트 연산자
 비트연산자 [ << ,  >> ]
 ```javascript
