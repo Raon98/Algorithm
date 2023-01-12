@@ -60,6 +60,17 @@
         }
     }
 ```
+
+```javascript
+// 다른개발자 풀이법 
+function solution(participant, completion) {
+    return participant.find((name) => !completion[name]--, completion.map(name => completion[name] = (completion[name] | 0) + 1))
+}
+// find이용해 네임의 키값과 다른값을 찾는데 find('콜백','펑션) 에서 2번째 arg인자값을 먼저 실행한다
+// 즉 map먼저 실행이되는데 completion[name] = (completion[name] | 0) + 1) 즉 같은 값이없으면 1로 초기화하고 같은값 을 더해져 나간다.
+// => 최빈값 구하기 m.set(n,(m.get(n)||0)+1) 과 비슷한 구조 # [name1]1 , [name2]1, [name3]2 
+// 이후 !completion[name]-- 하나씩 마이너스해가면서 중복된이름이 있는값도 찾아낼수있다.
+```
 ***
 **코드 설명**
 
