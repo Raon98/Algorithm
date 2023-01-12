@@ -73,8 +73,6 @@
 - 배열을 오름차순 또는 내림차순으로 정렬할 수 있다.
   - sort() of sort((a,b) => a-b) :오름차순 정렬
   - sort((a,b) => b-a ) 내림차순정렬
-
-[참조 : 네이버블로그](https://hianna.tistory.com/459)
 ***
 
 
