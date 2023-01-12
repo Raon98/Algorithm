@@ -68,8 +68,10 @@ function solution(participant, completion) {
 }
 // find이용해 네임의 키값과 다른값을 찾는데 find('콜백','펑션) 에서 2번째 arg인자값을 먼저 실행한다
 // 즉 map먼저 실행이되는데 completion[name] = (completion[name] | 0) + 1) 즉 같은 값이없으면 1로 초기화하고 같은값 을 더해져 나간다.
-// => 최빈값 구하기 m.set(n,(m.get(n)||0)+1) 과 비슷한 구조 # [name1]1 , [name2]1, [name3]2 
-// 이후 !completion[name]-- 하나씩 마이너스해가면서 중복된이름이 있는값도 찾아낼수있다.
+// => 최빈값 구하기 m.set(n,(m.get(n)||0)+1) 과 비슷한 구조 #
+// 이후 !completion[name]-- 에서 completion[name]은 `갯수`를 가져오므로 하나씩 마이너스해간다.
+// 여기서 ! 중요한데 --는 후치 이기때문에 값이 1이면 값이있어서 트루지면 !로 거짓 즉 다음으로 넘어간후 -- 시킨다는것
+// 결과가 나오기위해서는 completion[name]값이 0이던 아예없던 끝나게되므로 없는 값과 중복된 이름 값을 리턴하게 된다.
 ```
 ***
 **코드 설명**
