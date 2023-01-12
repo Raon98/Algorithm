@@ -160,6 +160,11 @@
 ```javascript
  camelCase | kimSungCheol | systemUpdate ...
 ```
+파스칼 표기법(Pascal Case)
+- 단어의 첫문자마다 대문자 표시
+```javascript
+ CamelCase | KimSungCheol | SystemUpdate ...
+```
 스네이크 표기법(Snake Case)
 - 단어 사이에 언더바를 넣어서 표기
 ```javascript

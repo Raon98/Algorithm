@@ -26,9 +26,9 @@ queue2 = [4, 6, 5, 1]
 **입출력 예** <br>
 <table>
 <tr>
-    <td colspan="2" align="center>queue1"></td>
-    <td colspan="2" align="center>queue2"></td>
-    <td colspan="2" align="center>Result"></td>
+    <td colspan="2" align="center">queue1</td>
+    <td colspan="2" align="center">queue2</td>
+    <td colspan="2" align="center">Result</td>
 </tr>
 <tr>
     <td colspan="2">[3, 2, 7, 2]</td>
