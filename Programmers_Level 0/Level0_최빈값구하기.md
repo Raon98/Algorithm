@@ -57,6 +57,15 @@
         result[x] = 0 + 1;
     }
  ```
+- 또다른 맵 맵핑법 
+```javascript
+     function solution(s) {
+         const m = new Map();
+            [...s].forEach(e=>m.set(e, m.get(e)+1||1));
+        return [...m].filter(e=>e[1]===1).map(e=>e[0]).sort().join("");
+    // e === [a,1] [b,2] [c,1] 상태라면 e[0] = abc / e[1] = 121 임
+     }
+```
 [참조 : 네이버블로그](https://hianna.tistory.com/459)
 ***
 
