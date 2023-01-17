@@ -91,4 +91,3 @@ function solution(participant, completion) {
 
 
 
-

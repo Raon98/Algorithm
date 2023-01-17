@@ -147,6 +147,10 @@ arr.reduce 이용해 배열 만들기 //초기값 배열로설정
     }, []);
     result; // ['홀수', '짝수', '홀수']
 ```
+Array.map 이용해 만들기
+```javascript
+completion.map(name => completion[name] = (completion[name]|0)+1) 
+```
 ***
 
 
