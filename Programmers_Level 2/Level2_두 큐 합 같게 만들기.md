@@ -204,6 +204,31 @@ array.reduce((acc,cur) => ({ ...acc,
    // countedNames is:
    // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
 ```
+#### 함수 구성을 위한 파이프 함수
+```javascript
+   // Building-blocks to use for composition
+   const double = x => x + x;
+   const triple = x => 3 * x;
+   const quadruple = x => 4 * x;
+   
+   // Function composition enabling pipe functionality
+   const pipe = (...functions) => input => functions.reduce(
+       (acc, fn) => fn(acc),
+       input
+   );
+   
+   // Composed functions for multiplication of specific values
+   const multiply6 = pipe(double, triple);
+   const multiply9 = pipe(triple, triple);
+   const multiply16 = pipe(quadruple, quadruple);
+   const multiply24 = pipe(double, triple, quadruple);
+   
+   // Usage
+   multiply6(6); // 36
+   multiply9(9); // 81
+   multiply16(16); // 256
+   multiply24(10); // 240
+```
 [참고 : MDN-Reduce](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 
