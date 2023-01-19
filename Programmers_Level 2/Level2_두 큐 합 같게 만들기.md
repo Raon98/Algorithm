@@ -139,7 +139,7 @@ array.reduce((acc,cur) => ({ ...acc,
         [cur]: (acc[cur] || 0) + 1
     }), {})
 ```
-arr.reduce 이용해 배열 만들기 //초기값 배열로설정
+#### arr.reduce 이용해 배열 만들기 //초기값 배열로설정
 ```javascript
     result = oneTwoThree.reduce((acc, cur) => {
       acc.push(cur % 2 ? '홀수' : '짝수');
@@ -147,7 +147,67 @@ arr.reduce 이용해 배열 만들기 //초기값 배열로설정
     }, []);
     result; // ['홀수', '짝수', '홀수']
 ```
-Array.map 이용해 만들기
+#### 확장 연산자와 초기값을 이용하여 객체로 이루어진 배열에 담긴 배열 연결하기
+```javascript
+   // friends - an array of objects
+   // where object field "books" - list of favorite books
+   var friends = [{
+     name: 'Anna',
+     books: ['Bible', 'Harry Potter'],
+     age: 21
+   }, {
+     name: 'Bob',
+     books: ['War and peace', 'Romeo and Juliet'],
+     age: 26
+   }, {
+     name: 'Alice',
+     books: ['The Lord of the Rings', 'The Shining'],
+     age: 18
+   }];
+   
+   // allbooks - list which will contain all friends' books +
+   // additional list contained in initialValue
+   var allbooks = friends.reduce(function(accumulator, currentValue) {
+     return [...accumulator, ...currentValue.books];
+   }, ['Alphabet']);
+   
+   // allbooks = [
+   //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
+   //   'Romeo and Juliet', 'The Lord of the Rings',
+   //   'The Shining'
+   // ]
+```
+#### 중첩배열 합치기
+```javascript
+   var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+           function(accumulator, currentValue) {
+              return accumulator.concat(currentValue);
+           },
+           []
+   );
+   // 펼친 결과: [0, 1, 2, 3, 4, 5]
+```
+
+#### 객체 내의 값 인스턴스 개수 세기 [중요]
+```javascript
+   var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+   
+   var countedNames = names.reduce(function (allNames, name) {
+     if (name in allNames) {
+       allNames[name]++;
+     }
+     else {
+       allNames[name] = 1;
+     }
+     return allNames;
+   }, {});
+   // countedNames is:
+   // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+```
+[참고 : MDN-Reduce](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+
+#### Array.map 이용해 만들기
 ```javascript
 completion.map(name => completion[name] = (completion[name]|0)+1) 
 ```
