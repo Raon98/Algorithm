@@ -75,6 +75,7 @@ function solution(numbers) {
 
 ***
 **다른 사람 풀이**
+replace 이용
 ```javascript
   function solution(numbers) {
       const obj = {
@@ -90,6 +91,10 @@ function solution(numbers) {
   }
 ```
 ***
+reduce 이용
+```javascript
+var solution=n=>Number(['zero','one','two','three','four','five','six','seven','eight','nine'].reduce((t,s,i)=>t.replaceAll(s,i),n  ))
+```
 **새로 배운 기술**
  
 - replace()의 두번째 인자값을 함수로 전달할 수 있다.
