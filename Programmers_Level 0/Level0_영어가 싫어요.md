@@ -35,20 +35,6 @@
 
 **JS 프로그래밍**
 ```javascript
-
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
 function solution(numbers) {
   let arr1 = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
   let arr2 = []
