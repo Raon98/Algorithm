@@ -97,3 +97,44 @@ function solution() {
     let arr = [...input].filter(v => fav.includes(v))
     return arr.length > 5 ? arr.slice(0,5) : arr
 }
+
+
+
+//(a,b) = (4,7) 4부터 7까지 별찍기
+// b가 100이상일시 15개로 맥스고정
+function solution() {
+    let a = 2
+    let b = 100
+    let star = "*"
+    let arr = []
+    if(a > b || a === b || a >= 15) {
+        return "오류"
+    }else{
+        if(b >=15){
+            b = 15
+        }
+        for(let i = a; i<=b; i++){
+            arr.push(star.repeat(i))
+        }
+    }
+    return arr.join("\n");
+}
+//(a,b) = (4,7) 4부터 7까지 별찍기
+// b가 100이상일시 15개로 맥스고정
+function solution() {
+    let a = 2
+    let b = 100
+    let star = "*"
+    let arr = []
+    if(a > b || a === b || a >= 15) {
+        return "오류"
+    }else{
+        if(b >=15){
+            b = 15
+        }
+        for(let i = a; i<=b; i++){
+            arr.push(star.repeat(i))
+        }
+    }
+    return arr.join("\n");
+}
