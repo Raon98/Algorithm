@@ -1,5 +1,16 @@
 'use strict';
 
+//암호문 변역하기
+function solution() {
+    const signal1 = {'a':'n','b ':'d','c':'a','d':'b','e':'e','f':'l','g':'j','h':'o','i':'z','j':'u','k':'y','l':'v','m':'w','n':'q','o':'x','p':'r','q':'p','r':'f','s':'g','t':'t','u':'m','v':'h','w':'i','x':'c','y':'k','z':'s'}
+    const signal2 = {'a':'z','b ':'y','c':'x','d':'w','e':'v','f':'u','g':'t','h':'s','i':'r','j':'q','k':'p','l':'o','m':'n','n':'m','o':'l','p':'k','q':'j','r':'i','s':'h','t':'g','u':'f','v':'e','w':'d','x':'c','y':'b','z':'a'}
+
+    let code = '01011 eowxvqp'
+    let [binary,cipher] = code.split(' ')
+
+    return [...binary].map((v,i)=> v==='0' ? signal1[cipher[i]]:signal2[cipher[i]]).join('')
+}
+
 /* 커피가격 맞추기 문제
 공부하면서 배운거
 1. reduce로 객체만들기
