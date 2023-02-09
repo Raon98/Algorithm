@@ -1,6 +1,18 @@
 'use strict';
 
 function solution() {
+    let a = '2,4'
+    let b = '4,8'
+    let [a1,a2] = a.split(',')
+    let [b1,b2] = b.split(',')
+    let arr1 = Array(+a2+1).fill(Math.abs(a2/2-a1)).map((v,i)=>v+i)
+    let arr2 = Array(+b2+1).fill(Math.abs(b2/2-b1)).map((v,i)=>v+i)
+    let dupli = arr1.filter(v=> arr2.includes(v)).length-1
+
+    return dupli > 0 ? dupli : 0
+}
+
+function solution() {
     const signal1 = {'a':'n','b ':'d','c':'a','d':'b','e':'e','f':'l','g':'j','h':'o','i':'z','j':'u','k':'y','l':'v','m':'w','n':'q','o':'x','p':'r','q':'p','r':'f','s':'g','t':'t','u':'m','v':'h','w':'i','x':'c','y':'k','z':'s'}
     const signal2 = {'a':'z','b ':'y','c':'x','d':'w','e':'v','f':'u','g':'t','h':'s','i':'r','j':'q','k':'p','l':'o','m':'n','n':'m','o':'l','p':'k','q':'j','r':'i','s':'h','t':'g','u':'f','v':'e','w':'d','x':'c','y':'b','z':'a'}
 
@@ -26,8 +38,6 @@ function solution() {
     return input.reduce((acc,cur) => drink[cur]+acc,0)
 }
 
-
-
 function solution() {
     var str = 'abcddaba'
     var result = ''
@@ -37,9 +47,6 @@ function solution() {
          }
     return result
 }
-
-
-
 
 function solution() {
     let num = 8
