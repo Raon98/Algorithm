@@ -1,4 +1,12 @@
 'use strict';
+function solution() {
+    let a = 'O O X O O'
+    let b = 2
+
+    let left = a.split(' ').slice(0,b).filter(v=> v==='O').length
+    let right = a.split(' ').slice(b-1,a.split(' ').length).filter(v=> v==='O').length
+    return left === right ? '동일' : left > right ? '왼쪽' : '오른쪽'
+}
 
 function solution() {
     let a = '2,4'
