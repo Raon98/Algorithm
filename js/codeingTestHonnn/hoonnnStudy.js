@@ -35,7 +35,12 @@ function solution() {
     const food = input.reduce((acc,cur,i) => {
         return {...acc, [cur]: [1000,2000,3000][i]};
     }, {});
-
+2. reduce로 배열속 객체만들기
+    function solution(numlist, n) {
+    let ans = numlist.reduce((a, c,i) => {return[...a,  {[c]:i} ];
+    }, []);
+    return ans
+}
 */
 function solution() {
     let input = ['솜사탕','물떡','떡볶이']
