@@ -189,6 +189,14 @@ array.reduce((acc,cur) => ({ ...acc,
 ```
 
 #### 객체 내의 값 인스턴스 개수 세기 [중요]
+
+```javascript
+   function solution() {
+       let i = '(a+b[a])+[{(b*e)/(a+q)}]'
+       let ans =[...i.replace(/[a-z\+\/\-\*]/g,'')].sort().reduce((a,c,i)=> {if (c in a) {a[c]++;}else {a[c] = 1;}return a;}, {})
+       return ans['(']===ans[')'] && ans['{']===ans['}'] &&ans['[']===ans[']'] ? "정상" : "비정상"
+   }
+```
 ```javascript
    var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
    

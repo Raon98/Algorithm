@@ -41,6 +41,13 @@ function solution() {
     }, []);
     return ans
 }
+3. reduce로 2차원 배열만들기
+    function solution(numlist, n) {
+    let ans = numlist.reduce((a,c,i) => { a.push([i])
+            return a;
+          }, [])
+    return ans
+    }
 */
 function solution() {
     let input = ['솜사탕','물떡','떡볶이']
