@@ -1,4 +1,11 @@
 'use strict';
+
+function solution() {
+    let i = '(a+b[a])+[{(b*e)/(a+q)}]'
+    let ans =[...i.replace(/[a-z\+\/\-\*]/g,'')].sort().reduce((a,c,i)=> {if (c in a) {a[c]++;}else {a[c] = 1;}return a;}, {})
+    return ans['(']===ans[')'] && ans['{']===ans['}'] &&ans['[']===ans[']'] ? "정상" : "비정상"
+}
+
 function solution() {
     let a = 'O O X O O'
     let b = 2
