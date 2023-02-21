@@ -52,7 +52,7 @@
 **JS 프로그래밍**
 ```javascript
 function solution(id_pw, db) {
-    let [id,pw] = [id_pw[0],id_pw[1]]
+    let [id,pw] = id_pw //[id_pw[0],id_pw[1]]
     let idCheck = db.map(v=> v[0])
     let pwCheck = db.map(v=> v[1]).filter((v,i)=>id===idCheck[i] && v===pw)
 
