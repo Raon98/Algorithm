@@ -175,3 +175,44 @@ function solution() {
     }
     return arr.join("\n");
 }
+
+/*어레이 챌린지 문제*/
+
+function solution() {
+    //const test = [2,1,3,5,2,1]
+    const test = [2,1,3,4,1]
+    //const test = [6,3,1,4,12,4]
+    let result = 0
+    let max = 0
+    let arr =[]
+    let t1,t2 //t1 = 기준값 t2 = 비교값
+    let repeat = false
+
+    //배열계수많큼 큰수일때만 최소값으로 배열 넣고 아닐시는 0으로 계산
+
+    for(let i=0; i <test.length; i++) {
+        arr = [] //초기화
+        repeat = false //초기화
+        t1 = test[i]
+        arr.push(t1) // t1은 기본값으로 푸시
+
+        for(let j=i; j< test.length-1; j++) {
+            t2 = test[j+1]
+            if(repeat){
+                arr.push(0)
+            }else{
+                if(t1 <=t2){ //기준값이 다음값보다 클시
+                    arr.push(t1)
+                }else{
+                    repeat = true
+                }
+            }
+        }
+        max = arr[0]*arr.filter(v=>v!==0).length
+        if(result < max) {
+            result = max
+        }
+    }
+
+    return result
+}
